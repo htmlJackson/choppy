@@ -1,0 +1,47 @@
+.promo {
+	position: relative;
+	background: url("../img/bg.jpg") no-repeat 0 center;
+	background-size: cover;
+	color: @white;
+	text-align: center;
+	padding: 75px 0;
+	margin-top: 80px;
+	.fadebg();
+//	min-height: calc(~"100vh - 80px");
+	@media @mobile {
+		padding: 35px 0 45px;
+		margin-top: 60px;
+	}
+}
+
+.promo__title {
+	font-size: 42px;
+	font-weight: 400;
+	line-height: 50px;
+	margin: 5px auto 33px;
+	@media @tablet-v {
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 18px;
+	}
+}
+
+.promo__description {
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 32px;
+	margin: 0 auto;
+	span {
+		color: @pink;
+	}
+	@media @tablet-v {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+
+.promo__car {
+	display: block;
+	margin: 45px auto 35px;
+
+}

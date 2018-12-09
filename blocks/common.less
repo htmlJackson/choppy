@@ -1,0 +1,153 @@
+@pink: #ff1f4c;
+@white: #ffffff;
+@black: #000000;
+
+@mobile: ~"(max-width: 767px)";
+@tablet-v: ~"(max-width: 991px)";
+@tablet-h: ~"(max-width: 1199px)";
+
+.clear {
+	&::after {
+    content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.placeholder(@color) {
+	&::-webkit-input-placeholder {color:@color;}
+	&::-moz-placeholder          {color:@color;}/* Firefox 19+ */
+	&:-moz-placeholder           {color:@color;}/* Firefox 18- */
+	&:-ms-input-placeholder      {color:@color;}
+}
+
+.centered {
+  float: none;
+  margin: 0 auto;
+}
+
+.title {
+	font-size: 32px;
+  font-weight: 400;
+	line-height: 43px;
+  @media @tablet-v {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.descr {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 26px;
+  @media @tablet-v {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.fadebg {
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #212121;
+		opacity: 0.84;
+	}
+}
+
+.shevron {
+	&::after {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 10px;
+		height: 10px;
+		border: 0.4px solid #fff;
+		border-top-width: 0;
+		border-right-width: 0;
+		top: 24px;
+		right: 40px;
+		transform: rotate(-135deg);
+		@media @tablet-v {
+			top: 19px;
+			width: 8px;
+			height: 8px;
+		}
+
+	}
+}
+
+body {
+	position: relative;
+  font-family: 'Roboto', sans-serif;
+  color: @black;
+
+	&.modal-open .header {
+		padding-right: 43px;
+		@media @tablet-v {
+			padding-right: 25px;
+		}
+	}
+}
+
+a {
+  color: @black;
+  &:hover {
+    text-decoration: none;
+    color: @pink;
+  }
+  &:focus {
+    color: @pink;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 110px 0 135px;
+
+  @media @tablet-v {
+    padding: 75px 0 90px;
+  }
+  @media @mobile {
+    padding: 25px 0 35px;
+  }
+}
+
+.popover {
+	width: 190px;
+	font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+	padding: 15px 10px;
+	text-align: center;
+}
+
+input[type=text].fill-error {
+    border-color: #ff5f5f;
+		.placeholder(#ff5f5f);
+}
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.container {
+		width: 650px;
+	}
+}

@@ -1,0 +1,48 @@
+.thanks {
+  text-align: center;
+}
+
+.thanks__title {
+  .title();
+}
+
+.thanks__description {
+  .descr();
+  max-width: 490px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+
+.thanks__go-back {
+  display: inline-block;
+  width: 120px;
+  position: relative;
+  font-size: 18px;
+  line-height: 24px;
+  transition: all 0.3s;
+  &:hover {
+    color: @pink;
+  }
+  .shevron();
+  &::after {
+    width: 8px;
+    height: 8px;
+    border-color: #000;
+    top: 50%;
+    margin-top: -4px;
+    left: 10px;
+    transform: rotate(45deg);
+    transition: all 0.3s;
+  }
+  &:hover {
+    &::after {
+      border-color: @pink;
+    }
+  }
+}
+
+.thanks__car {
+  padding: 45px 0;
+}

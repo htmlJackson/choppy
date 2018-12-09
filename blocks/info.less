@@ -1,0 +1,82 @@
+.info {
+  position: relative;
+  background: @black url("../img/carbg.jpg") no-repeat center;
+  background-size: cover;
+  color: @white;
+  .fadebg();
+
+  @media (min-width: 1280px) {
+    padding: 120px 0 180px;
+  }
+
+}
+
+.info__title {
+  .title();
+}
+
+.info__description {
+  .descr();
+  max-width: 450px;
+}
+
+.info__block {
+  @media @mobile {
+    width: 380px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.info__list {
+  margin-top: 25px;
+  @media @mobile {
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.info__item {
+  font-size: 16px;
+  min-height: 40px;
+  padding-left: 80px;
+  background: 0 0 no-repeat;
+  font-weight: 300;
+  &_parktronic {
+    background-image: url("../img/park.svg");
+  }
+  &_video {
+    padding-left: 60px;
+    background-image: url("../img/video.svg");
+    @media @mobile {
+      padding-left: 80px;
+    }
+  }
+  &_mirrors {
+    padding-left: 75px;
+    background-image: url("../img/rearview_mirror.svg");
+    @media @mobile {
+      padding-left: 80px;
+    }
+  }
+  &_transmission {
+    padding-left: 60px;
+    background-image: url("../img/gearshift.svg");
+    @media @mobile {
+      padding-left: 80px;
+    }
+  }
+
+
+
+  @media @tablet-v {
+    &_parktronic, &_video {
+      margin-bottom: 40px;
+    }
+  }
+  @media @mobile {
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,84 @@
+
+.actions {
+	@media @mobile {
+		.col-xs-3 {
+			width: 180px !important;
+			margin: 0 auto;
+			float: none;
+		}
+
+	}
+}
+
+.actions__title {
+  .title();
+	@media @mobile {
+		width: 350px;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.actions__list {
+    margin-top: 45px;
+		@media @tablet-v {
+			margin-top: 0;
+			// margin-left: 6%;
+			// margin-right: 6%;
+		}
+}
+
+.actions__item {
+  position: relative;
+	padding-top: 115px;
+	padding-left: 0;
+	background: no-repeat 70px 25px;
+	@media @tablet-v {
+		padding-top: 95px;
+		background-position: 60px 25px;
+	}
+	@media @mobile {
+		padding-bottom: 15px;
+	}
+
+
+	&_request {
+		background-image: url("../img/paper_plane.svg");
+	}
+
+	&_place {
+		background-image: url("../img/map.svg");
+	}
+
+	&_trip {
+		background-image: url("../img/car.svg");
+	}
+
+	&_pay {
+		background-image: url("../img/payment.svg");
+	}
+}
+
+.actions__counter {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 40px;
+	line-height: 53px;
+	color: @pink;
+}
+
+.actions__description {
+	display: block;
+	color: @black;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 20px;
+	padding-right: 40px;
+  @media @tablet-v {
+    font-size: 12px;
+    line-height: 20px;
+		padding-right: 0;
+  }
+}

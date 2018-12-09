@@ -1,0 +1,37 @@
+.button {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 300px;
+  max-width: 100%;
+  padding: 20px 40px 20px 20px;
+  background: @pink;
+  color: @white;
+  font-size: 18px;
+  line-height: 1;
+  border: 1.5px solid @pink;
+  border-radius: 2px;
+  outline: none;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  transition: all 0.3s;
+  &:hover {
+  	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  }
+  &:active {
+  	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+  }
+
+
+  .shevron();
+  &::after {
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+  }
+
+  @media @tablet-v {
+    width: 256px;
+    height: 48px;
+    font-size: 14px;
+    padding: 7px 5px 5px;
+  }
+}
